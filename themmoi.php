@@ -23,6 +23,10 @@ if ($action != "") {
 
         if ($conn->query($sql) === true) {
             $message = "New record created successfully";
+            $last_id = $mysqli->insert_id;
+            $message2 = "Chèn bản ghi thành công. Last ID: ". $last_ida
+            echo "<script type='text/javascript'>alert('$message2');</script>";
+
         } else {
             $error = "Error: " . $sql . "<br>" . $conn->error;
         }
